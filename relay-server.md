@@ -25,7 +25,7 @@ powershell -ExecutionPolicy Bypass -File windows\install.ps1
 
 ## 자동 업데이트
 
-`Jam Relay Updater` 작업이 6시간마다 (그리고 부팅 10분 뒤) backend 저장소의 최신 릴리스를 확인해요.
+`Jam Relay Updater` 작업이 **5분마다** (그리고 부팅 2분 뒤) backend 저장소의 최신 릴리스를 확인해요. 간격은 설치 때 `-UpdateEveryMinutes` 로 바꿀 수 있어요.
 
 1. 새 버전이 있으면 `jam-relay-<버전>.zip` 과 `.sig` 를 받아요
 2. **지금 설치된 버전 안의 공개키로 서명을 확인**해요. 배포 비밀키로 서명된 게 아니면 설치하지 않아요
