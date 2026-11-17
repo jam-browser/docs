@@ -8,8 +8,8 @@
 
 | | 버전 | 기준 커밋 |
 | --- | --- | --- |
-| 브라우저 | 설치 파일 [v0.2.0](https://github.com/jam-browser/browser/releases/tag/v0.2.0), main 은 그 이후 | `871208b` |
-| 중계 서버 | [v1.0.2](https://github.com/jam-browser/backend/releases/tag/v1.0.2) | `47a97f5` |
+| 브라우저 | 설치 파일 [v0.2.0](https://github.com/jam-browser/browser/releases/tag/v0.2.0), main 은 그 이후 | `5ba71a3` |
+| 중계 서버 | [v1.0.2](https://github.com/jam-browser/backend/releases/tag/v1.0.2), main 에 대역폭 한도 추가 (다음 릴리스) | `cbb5568` |
 
 이 문서는 위 main 코드 기준이에요. v0.2.0 새 기능: **브라우저 계정 · 비밀번호 뱅크 · 친구/자유 입장 Jam** → [계정 · 비밀번호 뱅크 · 친구](account.md).
 main 에만 있고 다음 릴리스에 들어갈 것:
