@@ -10,7 +10,7 @@ cd browser
 npm install
 node node_modules/electron/install.js   # npm 이 Electron 본체를 받지 않았을 때 (설치 스크립트가 막힌 환경)
 npm start                               # 실행
-npm test                                # 서버 테스트 26개 (+ 아래 중계 연동 9개)
+npm test                                # 서버 26 + 중계 연동 9 + 비밀번호 뱅크 · 신원 13 + 입장 방식 · 친구 11
 npm run dist                            # 설치 파일 → dist/
 npm run icon                            # 앱 아이콘 다시 만들기 → build/icon.png
 ```
@@ -25,6 +25,14 @@ npm run icon                            # 앱 아이콘 다시 만들기 → bui
 - browser 폴더 옆의 `jam-backend-build`, `jam-backend`, `backend` 폴더
 
 backend 폴더에서는 `npm ci` 를 먼저 해 두세요 (`ws` 필요).
+
+### 비밀번호 뱅크 테스트는 Electron 안에서도
+
+Electron 의 암호 라이브러리(BoringSSL)는 Node 와 지원 범위가 달라요 (예: `chacha20` 없음). 암호 코드를 바꾸면 Electron 런타임으로도 돌려 보세요.
+
+```powershell
+$env:ELECTRON_RUN_AS_NODE = '1'; .\node_modules\electron\dist\electron.exe test\vault-test.js
+```
 
 ### 실제 앱 E2E (`test/e2e/`)
 
@@ -47,6 +55,8 @@ Start-Process node -ArgumentList "test\e2e\test-site.js"            # 테스트 
 - `run-e2e.ps1` 은 실행 중인 Jam Browser 창을 모두 닫고 시작해요
 - 인터넷 연결이 필요해요 (위키백과, example.com, 위키미디어 영상)
 - 중계 E2E 를 실제 서버로: `$env:JAM_RELAY_ADDR = "서버주소:3031"` 후 `relay.e2e.js` 실행 (기본 `127.0.0.1:3031`)
+- **작업 화면을 가리지 않게:** 앱을 직접 띄울 때 `$env:JAM_TEST_OFFSCREEN = '1'` 로 실행하면 (`run-e2e.ps1` 에는 아직 없음) 앱 창이 화면 밖에 뜨고 포커스를 뺏지 않아요. 이때는 창이 가려진 것으로 처리되지 않도록 Electron 에 `--disable-features=CalculateNativeWinOcclusion --disable-backgrounding-occluded-windows --disable-renderer-backgrounding` 을 함께 넘기세요 (없으면 웹페이지에 입력이 전달되지 않아요). 웹페이지 안 클릭은 CDP 대신 `webview.sendInputEvent` 로 보내세요
+- 새 계정 프로필로 시작해야 처음 화면(계정 만들기)부터 확인돼요. 계정이 있는 프로필은 잠금 화면이 먼저 떠요
 
 ## 중계 서버 (jam-browser/backend)
 
