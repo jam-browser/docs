@@ -5,6 +5,7 @@
 
 > **합쳐진 PR:** [#6 브라우저 계정 · 이중 암호화 비밀번호 뱅크 · 친구/자유 입장 Jam](https://github.com/jam-browser/browser/pull/6) (main `01cfcb5`, [v0.2.0](https://github.com/jam-browser/browser/releases/tag/v0.2.0) 에 포함) → [계정 · 비밀번호 뱅크 · 친구](account.md), [보안](security.md#브라우저-계정--비밀번호-뱅크)
 > **합쳐진 PR:** [#8 1단계: 중계 서버 주소 목록 · 근처 찾기 · 페어링](https://github.com/jam-browser/browser/pull/8) (main `6c0d8a1`) → [설계안 1단계](design.md)
+> **합쳐진 PR:** [#9 2단계: 화면 미러링 + 조작 권한](https://github.com/jam-browser/browser/pull/9) (main `730eb23`) → [사용 설명서](user-guide.md#화면-미러링-호스트-탭을-영상으로), [보안](security.md#화면-미러링--원격-조작)
 > 이 변경들 때문에 아래 #1 · #2 가 main 과 **충돌**해요 (`src/main.js`, #2 는 `package.json` 도). 합치려면 작성자가 main 을 받아 충돌을 풀어야 해요.
 
 | PR | 제목 | 작성 | 기준 가지 | 규모 | 상태 |
