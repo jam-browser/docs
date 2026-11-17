@@ -8,14 +8,16 @@
 
 | | 버전 | 기준 커밋 |
 | --- | --- | --- |
-| 브라우저 | 설치 파일 [v0.2.0](https://github.com/jam-browser/browser/releases/tag/v0.2.0), main 은 그 이후 | `730eb23` |
+| 브라우저 | 설치 파일 [v0.2.0](https://github.com/jam-browser/browser/releases/tag/v0.2.0), main 은 그 이후 | `871208b` |
 | 중계 서버 | [v1.0.2](https://github.com/jam-browser/backend/releases/tag/v1.0.2) | `47a97f5` |
 
 이 문서는 위 main 코드 기준이에요. v0.2.0 새 기능: **브라우저 계정 · 비밀번호 뱅크 · 친구/자유 입장 Jam** → [계정 · 비밀번호 뱅크 · 친구](account.md).
 main 에만 있고 다음 릴리스에 들어갈 것:
 - **중계 서버 주소 목록 · 근처 Jam(같은 네트워크) · 링크 없이 확인 코드로 들어가기** → [사용 설명서](user-guide.md#근처-jam-같은-와이파이-초대-링크-없이), [설계안 1단계](design.md)
 - **화면 미러링 + 조작 권한(1P/2P 게임)** → [사용 설명서](user-guide.md#화면-미러링-호스트-탭을-영상으로), [보안](security.md#화면-미러링--원격-조작), [설계안 2단계](design.md)
-아직 합쳐지지 않은 변경은 [열린 PR 정리](open-pull-requests.md) 에 따로 모아 뒀어요.
+- **Chrome 확장 프로그램 · 웹 스토어, 탭별 소리 · 음소거** (wwg316, #1 · #3) → [사용 설명서](user-guide.md#브라우저-기능)
+- **로컬 파일 같이 보기 (PDF · HTML · 이미지 · 텍스트 · SWF)** → [사용 설명서](user-guide.md#같이-보는-파일-로컬-pdf--html--이미지--텍스트--swf), [보안](security.md#같이-보는-파일), [설계안 3단계](design.md)
+합쳐진 PR 과 바뀐 기본 동작은 [PR 정리](open-pull-requests.md) 에 모아 뒀어요.
 
 ## 문서
 
@@ -32,7 +34,7 @@ main 에만 있고 다음 릴리스에 들어갈 것:
 | [개발 · 테스트](development.md) | 소스로 실행, 테스트, 실제 앱 E2E (개발자용) |
 | [릴리스 절차](releasing.md) | 브라우저 · 중계 서버 새 버전 내는 방법 (개발자용) |
 | [설계안 v2](design.md) | 주소 미러링 / 화면 미러링(1P·2P), 로컬 PDF · HTML 같이 보기, 근처 찾기, 계정으로 이어 보기, 브라우저 · 보안 기능 계획 |
-| [열린 PR 정리](open-pull-requests.md) | 아직 main 에 합쳐지지 않은 변경 4건과 영향 |
+| [PR 정리](open-pull-requests.md) | 합쳐진 PR 목록과 바뀐 기본 동작 (소리 · 확장 프로그램) |
 
 ## 저장소
 
