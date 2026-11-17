@@ -12,12 +12,14 @@ gh release create v0.1.1 --repo jam-browser/browser \
 ```
 
 - `latest.yml` 을 꼭 같이 올려야 설치된 앱이 새 버전을 찾아요.
+- 설치된 앱은 켤 때 5초 뒤, 그다음 4시간마다 확인하고, 다시 켤 때 적용해요.
+- 릴리스 전에 [개발 · 테스트](development.md) 의 E2E 도 돌려 보세요.
 - 태그만 올리면 자동으로 빌드되게 하려면 `ci/github-release.yml` 을 `.github/workflows/release.yml` 로 옮겨 올리세요 (gh 토큰에 `workflow` 권한 필요).
 
 ## 중계 서버 (jam-browser/backend)
 
 ```bash
-npm version patch                              # 1.0.1 → 1.0.2
+npm version patch                              # 1.0.2 → 1.0.3
 npm test
 git push origin main --follow-tags
 node tools/make-release.js --key <배포 비밀키.pem> --publish
