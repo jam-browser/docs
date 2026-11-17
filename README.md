@@ -2,6 +2,8 @@
 
 친구와 같은 웹페이지를 함께 보는 Windows 데스크톱 브라우저, **Jam Browser** 의 문서예요.
 
+### ⬇ [Jam Browser 설치 파일 받기 (Windows, 최신 버전)](https://github.com/jam-browser/browser/releases/latest/download/JamBrowser-Setup.exe)
+
 ## 현재 버전 (2026-11-17 기준, 각 저장소 main)
 
 | | 버전 | 기준 커밋 |

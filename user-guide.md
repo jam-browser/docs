@@ -2,7 +2,8 @@
 
 ## 설치
 
-1. [Releases](https://github.com/jam-browser/browser/releases/latest) 에서 `JamBrowser-Setup-버전.exe` 받기
+1. **[설치 파일 받기 (JamBrowser-Setup.exe, 최신 버전)](https://github.com/jam-browser/browser/releases/latest/download/JamBrowser-Setup.exe)**
+   — 이전 버전은 [Releases](https://github.com/jam-browser/browser/releases) 에 있어요
 2. 실행하면 묻지 않고 바로 설치돼요 (관리자 권한 불필요, 바탕화면·시작 메뉴 바로가기 생성)
 3. "Windows 의 PC 보호" 창이 뜨면 **추가 정보 → 실행** (코드 서명 인증서가 없어서 나오는 창이에요)
 
