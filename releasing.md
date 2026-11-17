@@ -3,13 +3,13 @@
 ## 브라우저 (jam-browser/browser)
 
 ```bash
-# 1. package.json 의 version 올리기 (예: 0.1.1)
+# 1. package.json 과 package-lock.json(맨 위 두 곳)의 version 올리기 (예: 0.2.1)
 npm test
-npm run dist                                  # dist/JamBrowser-Setup-0.1.1.exe, .blockmap, latest.yml
-cp dist/JamBrowser-Setup-0.1.1.exe dist/JamBrowser-Setup.exe   # 버전 없는 이름의 사본 (고정 다운로드 링크용)
-git tag v0.1.1 && git push origin main v0.1.1
-gh release create v0.1.1 --repo jam-browser/browser \
-  dist/JamBrowser-Setup-0.1.1.exe dist/JamBrowser-Setup-0.1.1.exe.blockmap dist/latest.yml dist/JamBrowser-Setup.exe
+npm run dist                                  # dist/JamBrowser-Setup-0.2.1.exe, .blockmap, latest.yml
+cp dist/JamBrowser-Setup-0.2.1.exe dist/JamBrowser-Setup.exe   # 버전 없는 이름의 사본 (고정 다운로드 링크용)
+git tag v0.2.1 <버전 PR 을 합친 main 커밋> && git push origin v0.2.1
+gh release create v0.2.1 --repo jam-browser/browser \
+  dist/JamBrowser-Setup-0.2.1.exe dist/JamBrowser-Setup-0.2.1.exe.blockmap dist/latest.yml dist/JamBrowser-Setup.exe
 ```
 
 - `latest.yml` 을 꼭 같이 올려야 설치된 앱이 새 버전을 찾아요.

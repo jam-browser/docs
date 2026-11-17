@@ -39,7 +39,7 @@
 
 ## 브라우저 계정 · 비밀번호 뱅크
 
-browser main `01cfcb5` 부터 (다음 릴리스에 포함). 사용법은 [계정 · 비밀번호 뱅크 · 친구](account.md).
+[v0.2.0](https://github.com/jam-browser/browser/releases/tag/v0.2.0) 부터. 사용법은 [계정 · 비밀번호 뱅크 · 친구](account.md).
 
 ```
 계정 비밀번호 (NFKC 정규화)

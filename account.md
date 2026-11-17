@@ -1,7 +1,6 @@
 # 브라우저 계정 · 비밀번호 뱅크 · 친구
 
-> browser main `01cfcb5` 부터 들어간 기능이에요 ([PR #6](https://github.com/jam-browser/browser/pull/6)).
-> 설치 파일 v0.1.0 에는 아직 없고, **다음 릴리스**부터 자동 업데이트로 들어가요.
+> [v0.2.0](https://github.com/jam-browser/browser/releases/tag/v0.2.0) 부터 들어간 기능이에요 ([PR #6](https://github.com/jam-browser/browser/pull/6)). 설치된 앱은 자동 업데이트로 받아요.
 
 Jam Browser 의 계정은 **이 PC 안에만 있는 계정**이에요. 회원 가입 서버가 없고, 계정 정보를 어디로도 보내지 않아요.
 계정이 있으면 브라우저를 열 때 비밀번호로 잠금을 풀어야 하고, 사이트 비밀번호를 이중 암호화해서 보관할 수 있어요.
