@@ -8,10 +8,11 @@
 
 | | 버전 | 기준 커밋 |
 | --- | --- | --- |
-| 브라우저 | [v0.2.0](https://github.com/jam-browser/browser/releases/tag/v0.2.0) | `16323fc` |
+| 브라우저 | 설치 파일 [v0.2.0](https://github.com/jam-browser/browser/releases/tag/v0.2.0), main 은 그 이후 | `6c0d8a1` |
 | 중계 서버 | [v1.0.2](https://github.com/jam-browser/backend/releases/tag/v1.0.2) | `47a97f5` |
 
 이 문서는 위 main 코드 기준이에요. v0.2.0 새 기능: **브라우저 계정 · 비밀번호 뱅크 · 친구/자유 입장 Jam** → [계정 · 비밀번호 뱅크 · 친구](account.md).
+main 에만 있고 다음 릴리스에 들어갈 것: **중계 서버 주소 목록 · 근처 Jam(같은 네트워크) · 링크 없이 확인 코드로 들어가기** → [사용 설명서](user-guide.md#근처-jam-같은-와이파이-초대-링크-없이), [설계안 1단계](design.md).
 아직 합쳐지지 않은 변경은 [열린 PR 정리](open-pull-requests.md) 에 따로 모아 뒀어요.
 
 ## 문서
