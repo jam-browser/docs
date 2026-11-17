@@ -3,7 +3,7 @@
 2026-11-17 기준, [jam-browser/browser](https://github.com/jam-browser/browser/pulls) 에 열려 있는 PR 4건이에요.
 **아직 main 에 합쳐지지 않았어요.** 이 문서의 다른 페이지들은 합쳐지기 전(main) 기준이에요.
 
-> **합쳐진 PR:** [#6 브라우저 계정 · 이중 암호화 비밀번호 뱅크 · 친구/자유 입장 Jam](https://github.com/jam-browser/browser/pull/6) (main `01cfcb5`) → [계정 · 비밀번호 뱅크 · 친구](account.md), [보안](security.md#브라우저-계정--비밀번호-뱅크)
+> **합쳐진 PR:** [#6 브라우저 계정 · 이중 암호화 비밀번호 뱅크 · 친구/자유 입장 Jam](https://github.com/jam-browser/browser/pull/6) (main `01cfcb5`, [v0.2.0](https://github.com/jam-browser/browser/releases/tag/v0.2.0) 에 포함) → [계정 · 비밀번호 뱅크 · 친구](account.md), [보안](security.md#브라우저-계정--비밀번호-뱅크)
 > 이 변경 때문에 아래 #1 · #2 가 main 과 **충돌**해요 (`src/main.js`, #2 는 `package.json` 도). 합치려면 작성자가 main 을 받아 충돌을 풀어야 해요.
 
 | PR | 제목 | 작성 | 기준 가지 | 규모 | 상태 |
