@@ -6,12 +6,14 @@
 # 1. package.json 의 version 올리기 (예: 0.1.1)
 npm test
 npm run dist                                  # dist/JamBrowser-Setup-0.1.1.exe, .blockmap, latest.yml
+cp dist/JamBrowser-Setup-0.1.1.exe dist/JamBrowser-Setup.exe   # 버전 없는 이름의 사본 (고정 다운로드 링크용)
 git tag v0.1.1 && git push origin main v0.1.1
 gh release create v0.1.1 --repo jam-browser/browser \
-  dist/JamBrowser-Setup-0.1.1.exe dist/JamBrowser-Setup-0.1.1.exe.blockmap dist/latest.yml
+  dist/JamBrowser-Setup-0.1.1.exe dist/JamBrowser-Setup-0.1.1.exe.blockmap dist/latest.yml dist/JamBrowser-Setup.exe
 ```
 
 - `latest.yml` 을 꼭 같이 올려야 설치된 앱이 새 버전을 찾아요.
+- `JamBrowser-Setup.exe` 를 같이 올려야 README 의 "설치 파일 받기" 링크(`releases/latest/download/JamBrowser-Setup.exe`)가 새 버전을 가리켜요.
 - 설치된 앱은 켤 때 5초 뒤, 그다음 4시간마다 확인하고, 다시 켤 때 적용해요.
 - 릴리스 전에 [개발 · 테스트](development.md) 의 E2E 도 돌려 보세요.
 - 태그만 올리면 자동으로 빌드되게 하려면 `ci/github-release.yml` 을 `.github/workflows/release.yml` 로 옮겨 올리세요 (gh 토큰에 `workflow` 권한 필요).
