@@ -56,7 +56,7 @@ powershell -ExecutionPolicy Bypass -File windows\install.ps1
 
 - 친구끼리 무료로 쓰면 보통 문제없어요. 불특정 다수에게 서비스로 열거나 돈을 받는다면 전기통신사업법상 부가통신사업 신고 대상인지 확인하세요.
 - 한 Jam 최대 16명, IP 당 동시 연결 30개, 동시에 열 수 있는 Jam 200개(`config.json` 의 `maxRoutes`) 제한이 있어요.
-- **대역폭 한도** *(main, 다음 릴리스)* — `config.json` 또는 환경 변수, 0 이면 제한 없음
+- **대역폭 한도** *(v1.0.3 부터)* — `config.json` 또는 환경 변수, 0 이면 제한 없음
 
   | 설정 | 환경 변수 | 기본 | 뜻 |
   | --- | --- | --- | --- |
