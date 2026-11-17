@@ -3,10 +3,13 @@
 2026-11-17 기준, [jam-browser/browser](https://github.com/jam-browser/browser/pulls) 에 열려 있는 PR 4건이에요.
 **아직 main 에 합쳐지지 않았어요.** 이 문서의 다른 페이지들은 합쳐지기 전(main) 기준이에요.
 
+> **합쳐진 PR:** [#6 브라우저 계정 · 이중 암호화 비밀번호 뱅크 · 친구/자유 입장 Jam](https://github.com/jam-browser/browser/pull/6) (main `01cfcb5`) → [계정 · 비밀번호 뱅크 · 친구](account.md), [보안](security.md#브라우저-계정--비밀번호-뱅크)
+> 이 변경 때문에 아래 #1 · #2 가 main 과 **충돌**해요 (`src/main.js`, #2 는 `package.json` 도). 합치려면 작성자가 main 을 받아 충돌을 풀어야 해요.
+
 | PR | 제목 | 작성 | 기준 가지 | 규모 | 상태 |
 | --- | --- | --- | --- | --- | --- |
-| [#1](https://github.com/jam-browser/browser/pull/1) | Chrome 호환성: User-Agent 정리 + Chrome 확장 프로그램 지원 | wwg316, 11-17 13:48 | `main` | +356 / −2, 11파일 | 열림 · 충돌 없음 |
-| [#2](https://github.com/jam-browser/browser/pull/2) | Jam 테스트 환경(`npm run jam`) + E2E 포트 설정 | wwg316, 11-17 14:51 | `main` | +187 / −18, 14파일 | 열림 · 충돌 없음 |
+| [#1](https://github.com/jam-browser/browser/pull/1) | Chrome 호환성: User-Agent 정리 + Chrome 확장 프로그램 지원 | wwg316, 11-17 13:48 | `main` | +356 / −2, 11파일 | 열림 · **충돌** (`src/main.js`) |
+| [#2](https://github.com/jam-browser/browser/pull/2) | Jam 테스트 환경(`npm run jam`) + E2E 포트 설정 | wwg316, 11-17 14:51 | `main` | +187 / −18, 14파일 | 열림 · **충돌** (`src/main.js`, `package.json`) |
 | [#3](https://github.com/jam-browser/browser/pull/3) | 영상 소리 켜기: 전체 음소거 제거 + 탭별 음소거 | wwg316, 11-17 14:52 | `#2` 위에 쌓음 | +44 / −7, 8파일 | 열림 · 충돌 없음 |
 | [#4](https://github.com/jam-browser/browser/pull/4) | 유튜브 재생목록에서 다음 영상으로 넘어갈 때 Jam 이 무한 반복되던 문제 | wwg316, 11-17 15:35 | `#3` 위에 쌓음 | +79 / −23, 5파일 | 열림 · 충돌 없음 |
 
@@ -38,6 +41,7 @@
 
 - UA 를 Chrome 처럼 바꿔서 사이트의 Electron 차단을 피하는 방식이 각 사이트 정책에 맞는지 (특히 Google 로그인은 의도적으로 내장 브라우저를 막고 있음)
 - 확장 프로그램은 Jam 탭 내용(주소, 화면)을 읽을 수 있어요 → [보안](security.md) 문서에 반영 필요
+- 확장 프로그램은 웹페이지의 로그인 칸도 읽을 수 있어서, 🔑 로 채운 비밀번호를 볼 수 있어요 (비밀번호 뱅크 자체 파일은 못 읽음)
 - `postinstall` 스크립트: npm 설정에 따라 설치 스크립트가 막히는 환경에서는 `src/generated/` 가 안 만들어질 수 있음
 - 새 의존성 2개(MIT)의 라이선스 고지
 

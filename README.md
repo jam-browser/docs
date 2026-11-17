@@ -8,19 +8,21 @@
 
 | | 버전 | 기준 커밋 |
 | --- | --- | --- |
-| 브라우저 | [v0.1.0](https://github.com/jam-browser/browser/releases/tag/v0.1.0) | `5e40e00` |
+| 브라우저 | 설치 파일 [v0.1.0](https://github.com/jam-browser/browser/releases/tag/v0.1.0), main 은 그 이후 | `01cfcb5` |
 | 중계 서버 | [v1.0.2](https://github.com/jam-browser/backend/releases/tag/v1.0.2) | `47a97f5` |
 
-이 문서는 위 main 코드 기준이에요. 아직 합쳐지지 않은 변경은 [열린 PR 정리](open-pull-requests.md) 에 따로 모아 뒀어요.
+이 문서는 위 main 코드 기준이에요. 브라우저 main 의 **브라우저 계정 · 비밀번호 뱅크 · 친구/자유 입장 Jam**([PR #6](https://github.com/jam-browser/browser/pull/6))은 아직 설치 파일에 없고 다음 릴리스에 들어가요.
+아직 합쳐지지 않은 변경은 [열린 PR 정리](open-pull-requests.md) 에 따로 모아 뒀어요.
 
 ## 문서
 
 | 문서 | 내용 |
 | --- | --- |
 | [사용 설명서](user-guide.md) | 설치, Jam 시작·참여, 기능, 정해진 값, 꾸미기, 단축키 |
+| [계정 · 비밀번호 뱅크 · 친구](account.md) | 브라우저 계정(잠금), 이중 암호화 비밀번호 뱅크, 친구 코드, Jam 입장 방식(수락 · 친구만 · 자유) |
 | [포트 · 포트 포워딩](ports.md) | 어떤 포트를 열어야 하는지, 공유기 설정 방법 |
 | [중계 서버](relay-server.md) | 멀리 있는 친구와 하기 위한 서버 설치와 자동 업데이트 |
-| [보안](security.md) | 암호화, 참여 승인, 제한 값, 다운로드 보관, 클립보드 경고 등 |
+| [보안](security.md) | 암호화, 참여 승인 · 입장 방식, 계정 금고 암호화 구조, 제한 값, 다운로드 보관, 클립보드 경고 등 |
 | [개인정보](privacy.md) | 무엇이 누구에게 공유되는지 |
 | [문제 해결](troubleshooting.md) | 접속이 안 될 때, 경고 창, 알려진 문제, 로그 위치 |
 | [구조](architecture.md) | 저장소와 구성 요소, 동작 흐름 |
