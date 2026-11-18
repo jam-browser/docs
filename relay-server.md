@@ -56,7 +56,7 @@ powershell -ExecutionPolicy Bypass -File windows\install.ps1
 
 - 친구끼리 무료로 쓰면 보통 문제없어요. 불특정 다수에게 서비스로 열거나 돈을 받는다면 전기통신사업법상 부가통신사업 신고 대상인지 확인하세요.
 - IP 당 동시 연결 30개, 동시에 열 수 있는 Jam 200개(`config.json` 의 `maxRoutes`) 제한이 있어요.
-- **한도 설정** — `config.json` 또는 환경 변수, 0 이면 제한 없음. v1.0.4(준비됨, 아직 배포 전)부터 기본값이 모두 "제한 없음" 이에요
+- **한도 설정** — `config.json` 또는 환경 변수, 0 이면 제한 없음. [v1.0.4](https://github.com/jam-browser/backend/releases/tag/v1.0.4) 부터 기본값이 모두 "제한 없음" 이에요
 
   | 설정 | 환경 변수 | 기본 (v1.0.4) | v1.0.3 | 뜻 |
   | --- | --- | --- | --- | --- |
