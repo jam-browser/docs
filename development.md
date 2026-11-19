@@ -58,6 +58,19 @@ Start-Process node -ArgumentList "test\e2e\test-site.js"            # 테스트 
 - **작업 화면을 가리지 않게:** 앱을 직접 띄울 때 `$env:JAM_TEST_OFFSCREEN = '1'` 로 실행하면 (`run-e2e.ps1` 에는 아직 없음) 앱 창이 화면 밖에 뜨고 포커스를 뺏지 않아요. 이때는 창이 가려진 것으로 처리되지 않도록 Electron 에 `--disable-features=CalculateNativeWinOcclusion --disable-backgrounding-occluded-windows --disable-renderer-backgrounding` 을 함께 넘기세요 (없으면 웹페이지에 입력이 전달되지 않아요). 웹페이지 안 클릭은 CDP 대신 `webview.sendInputEvent` 로 보내세요
 - 새 계정 프로필로 시작해야 처음 화면(계정 만들기)부터 확인돼요. 계정이 있는 프로필은 잠금 화면이 먼저 떠요
 
+### Jam 기능 E2E (`test/e2e-jam/`)
+
+근처 찾기 · 계정 · 화면 미러링 · 파일 · 설정 · 핑 · 대역폭 제한 중계 · 설치본 점검 · 자동 업데이트 서명을 실제 앱 두 개로 확인해요. 창은 화면 밖에 뜨고, 테스트마다 로그에서 메인 프로세스 오류를 검사해요. 자세한 건 browser 저장소의 `test/e2e-jam/README.md`.
+
+```powershell
+powershell -ExecutionPolicy Bypass -File test\e2e-jam\run.ps1                    # 전부
+powershell -ExecutionPolicy Bypass -File test\e2e-jam\run.ps1 -Tests ping,files  # 일부
+```
+
+### CI
+
+`ci/test.yml` 을 `.github/workflows/test.yml` 로 옮기면 PR · main 마다 `npm test` 가 Windows 에서 돌아요 (gh 토큰에 `workflow` 권한 필요: `gh auth refresh -s workflow`).
+
 ## 중계 서버 (jam-browser/backend)
 
 ```bash
